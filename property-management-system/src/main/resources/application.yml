@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+# MyBatis-plus配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  global-config:
+    db-config:
+      id-type: auto
+      table-prefix: tb_
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#数据库配置
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      url: jdbc:mysql://localhost:3306/wuye_manage?useSSL=false
+      max-active: 10
